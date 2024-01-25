@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>快点时间-在线标准北京时间校对</title>
+    <script src="//cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
+    <meta name="keywords" content="北京时间,时间校对,时间,现在时间,北京时间校对,标准时间">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="main">
+        <div class="lg">
+            <h2><a href="https://time.quickso.cn" target="_top" title="快点时间">快点时间</a></h2>
+        </div>
+        <div id="time_section">
+            <div id="msgs">
+                <div id="msgdiv">
+                    <h1>现在的<span>北京</span>时间</h1>
+                </div>
+            </div>
+            <div style="width:100%;position:relative">
+                <div id="clock0_bg"><time id="clock">加载中...</time></div>
+            </div>
+            <div id="dd" class=" tr clockdate" title="点击显示日历">加载中...</div>
+        </div>
+        <div class=" tr" id="global-times"></div>
+
+
+
+        <section id="time_zone">
+            <h2><span>北京</span>时区信息</h2>
+            <div class="UTC_offset limited_width">
+                <div class="current_UTC_offset">UTC +8</div>
+                <div class="tz_name_abbr_diff"><span><span>China Standard Time</span> (CST)</span><br>
+                    <span class="nw">始终</span> <span><span>与香港时间相同</span></span>
+                </div>
+            </div>
+            <div style="padding-bottom:20px" class="limited_width">
+
+            </div>
+            <div class="limited_width">
+                <ul>
+                    <p>北京自 1991 年以来从未实行夏时制。</p>
+                    <p>北京的 IANA 时区标识符为 Asia/Shanghai。</p>
+                </ul>
+            </div>
+        </section>
+        <section class="foot">
+            ©️ 欢哥科技
+        </section>
+    </div>
+    </div>
+   <script src="time.js"></script>
+</body>
+
+</html>

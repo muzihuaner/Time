@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+body {
+    font-family: Montserrat, 'Arial Black', 'Arial-BoldMT', 'Arial Bold', Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+#main {
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    background: #fff;
+    transition: margin .3s ease-out;
+}
+
+#time_section {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    position: relative;
+}
+
+#time_zone {
+    background: #ccd;
+    min-height: 400px;
+}
+
+section {
+    clear: both;
+    float: left;
+    display: block;
+    width: 90%;
+    padding: 60px 5%;
+    position: relative;
+    background: #222;
+    color: #fff;
+}
+
+section h2,
+q {
+    color: #665e5e;
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: 2px;
+    float: left;
+    margin-bottom: 20px;
+}
+
+.UTC_offset {
+    padding: 40px 0 0px 0;
+}
+
+#time_zone div,
+#time_zone li {
+    color: #000;
+}
+
+#time_zone span span {
+    font-weight: 900;
+}
+
+span a,
+.nw,
+#clock {
+    white-space: nowrap;
+}
+
+.limited_width {
+    width: 100%;
+    max-width: 1200px;
+    float: right;
+}
+
+.tz_name_abbr_diff {
+    font-size: 42px;
+    line-height: 52px;
+}
+
+#time_zone .current_UTC_offset {
+    font-size: 102px;
+    line-height: 102px;
+    font-weight: 900;
+}
+
+#time_section h1 {
+    color: black;
+    font-size: 30px;
+    position: absolute;
+    font-weight: 400;
+    top: 90px;
+}
+
+#time_section h1 span {
+    font-weight: 900;
+}
+
+#clock {
+    color: #333;
+    font-size: 236px;
+    line-height: 165px;
+    margin: 0 auto;
+    font-weight: bolder;
+    font-family: TimeTraveler, Arial, Helvetica, sans-serif;
+}
+
+
+.city-time {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.city-name {
+    font-weight: bold;
+    display: block;
+}
+
+.time-difference-visual {
+    display: inline-block;
+    width: 40px;
+    height: 25px;
+    background-color: #4CAF50;
+    border-radius: 10px;
+    margin-left: 5px;
+    padding: 2px;
+}
+
+#clock0_bg {
+    width: 100%;
+}
+
+@media only screen and (max-width: 1280px) {
+    #clock0_bg {
+        margin: 60px 0;
+    }
+}
+
+#clock0_bg {
+    margin: 190px 0;
+}
+
+.lg {
+    margin-bottom: 20px;
+    z-index: 9;
+    position: relative;
+    font-weight: 900;
+    font-style: normal;
+}
+
+a:link,
+div.lg a:visited {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 20px 30px;
+    letter-spacing: 3px;
+}
+
+.lg a:link,
+.lg a:visited {
+    background: #c35;
+    float: left;
+    display: block;
+    color: #fff;
+    border: 0;
+    padding: 20px;
+    font: 26px/20px Montserrat, Arial, sans-serif;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+a:link,
+a:visited {
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.clockdate {
+    letter-spacing: 0;
+    font-family: Montserrat, 'Arial Black', 'Arial-BoldMT', 'Arial Bold', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: xxx-large;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 10px;
+    float: left;
+}
+
+h3 {
+    color: #665e5e;
+    font-size: 30px;
+    line-height: 50px;
+    letter-spacing: 2px;
+    float: right;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    /* 手机端样式 */
+    #clock {
+        font-size: 5rem;
+    }
+}
