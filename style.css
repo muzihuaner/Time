@@ -30,16 +30,11 @@ body {
     position: relative;
 }
 
-#time_zone {
-    background: #ccd;
-    min-height: 400px;
-}
-
 section {
     clear: both;
     float: left;
     display: block;
-    width: 90%;
+    width: 100%;
     padding: 60px 5%;
     position: relative;
     background: #222;
@@ -56,9 +51,6 @@ q {
     margin-bottom: 20px;
 }
 
-.UTC_offset {
-    padding: 40px 0 0px 0;
-}
 
 #time_zone div,
 #time_zone li {
@@ -70,28 +62,9 @@ q {
 }
 
 span a,
-.nw,
 #clock {
     white-space: nowrap;
 }
-
-.limited_width {
-    width: 100%;
-    max-width: 1200px;
-    float: right;
-}
-
-.tz_name_abbr_diff {
-    font-size: 42px;
-    line-height: 52px;
-}
-
-#time_zone .current_UTC_offset {
-    font-size: 102px;
-    line-height: 102px;
-    font-weight: 900;
-}
-
 #time_section h1 {
     color: black;
     font-size: 30px;
@@ -132,6 +105,7 @@ span a,
     display: inline-block;
     width: 40px;
     height: 25px;
+    line-height: 20px;
     background-color: #4CAF50;
     border-radius: 10px;
     margin-left: 5px;
@@ -186,7 +160,6 @@ a:link,
 a:visited {
     color: #333;
     text-decoration: none;
-    border-bottom: 1px solid #ccc;
 }
 
 .clockdate {
@@ -221,19 +194,23 @@ h3 {
         font-size: 4rem;
     }
     .huangli {
-        width: 338px !important;;
+        width: inherit !important;
     }
     .xishen {
-        left: 108px!important;
+        left: 100px!important;
     }
     .fushen {
-        left: 180px!important;
+        left: 150px!important;
     }
     .caishen {
-        left: 256px!important;
+        left: 200px!important;
     }
     .clockdate {
         font-size: xx-large!important;
+    }
+    .xishen, .fushen, .caishen {
+        display: grid;
+        font-size: smaller;
     }
 }
 
@@ -290,7 +267,7 @@ h3 {
 
 .nayin, .chongsha, .pengzu {
     position: absolute;
-    left: 130px;
+    left: 100px;
 }
 .chongsha {
     top: 90px;
@@ -373,7 +350,27 @@ h3 {
 }
 .pengzu i {
     position: absolute;
-    left: 50px;
+    left: 30px;
     top: -1em;
     width: 120px;
+}
+#box_shadow {
+    position: relative;
+    background: #fafafa;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    padding: 2em 1.5em;
+    color: rgba(0,0,0, .8);
+    text-shadow: 0 1px 0 #ddd;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 5px auto;
+    box-shadow: 0 1px 3px rgba(18,18,18,.1);
+}
+input.ips {
+    font: 1.2em "Courier New", Microsoft YaHei, Courier, monospace;
+    font-weight: lighter;
+    line-height: 1.5em;
+    text-align: center;
+    width: 100%;
 }

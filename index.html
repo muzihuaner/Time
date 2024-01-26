@@ -7,16 +7,17 @@
     <title>快点时间-在线标准北京时间校对</title>
     <script src="//cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://jsd.onmicrosoft.cn/gh/6tail/lunar-javascript@master/lunar.js"></script>
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
     <meta name="keywords" content="北京时间,时间校对,时间,现在时间,北京时间校对,标准时间">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div id="main">
+    <div class="container-fluid" id="main">
         <div class="lg">
             <h2><a href="https://time.quickso.cn" target="_top" title="快点时间">快点时间</a></h2>
         </div>
-        <div id="time_section">
+        <div id="time_section" class="container">
             <div id="msgs">
                 <div id="msgdiv">
                     <h1>现在是<span>北京</span>时间</h1>
@@ -37,19 +38,19 @@
                 <div class="xishen"><b>喜神</b><i id="xishen"></i></div>
                 <div class="fushen"><b>福神</b><i id="fushen"></i></div>
                 <div class="caishen"><b>财神</b><i id="caishen"></i></div>
-                <div class="yiji" id="yi">     
+                <div class="yiji" id="yi">
                 </div>
-                <div class="yiji ji" id="ji">   
+                <div class="yiji ji" id="ji">
                 </div>
                 <div class="shen" id="jshen">
                 </div>
-                <div class="shen xiong" id="xshen"> 
+                <div class="shen xiong" id="xshen">
                 </div>
             </div>
         </div>
         <div class=" tr" id="global-times"></div>
 
-        <section id="time_zone">
+        <div id="time_zone" class="container-fluid">
             <h2><span>北京</span>时区信息</h2>
             <div class="UTC_offset limited_width">
                 <div class="current_UTC_offset">UTC +8</div>
@@ -66,14 +67,466 @@
                     <p>北京的 IANA 时区标识符为 Asia/Shanghai。</p>
                 </ul>
             </div>
-        </section>
-        <section class="foot">
+        </div>
+        <div class="ntp text-center">
+            <h2>国内外<span>NTP</span>服务器</h2>
+            <p>NTP 是 Network Time Protocol 的简称，也就是网络时间协议。而 NTP 服务器是可以通过网络来同步时间的服务器。</p>
+            <div id="box_shadow" class="container">
+                <p align="center" id="china">国内知名公共 NTP 服务器地址<br>
+                    Chinese Public NTP Server</p>
+                <p id="nav_p">[国内 NTP 服务器] · <a href="#global">国际 NTP 服务器</a></p>
+                <p>
+                    <span style="font-weight: bold;">国家授时中心 NTP 服务器</span><br>
+                    NTSC NTP Server
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="ntp.ntsc.ac.cn">
+                </p>
+                <p>注意，尽量使用上面的域名，如果确实无法填写域名可以使用下面IP：</p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="114.118.7.161">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="114.118.7.163">
+                </p>
+            </div>
+
+            <div id="box_shadow" class="container">
+                <p>
+                    <span style="font-weight: bold;">中国 NTP 快速授时服务</span><br>
+                    NTP ORG CN
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="cn.ntp.org.cn">
+                </p>
+                <p>注意，尽量使用上面的域名，或者使用 ping 上面域名得到的 IP：</p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="2001:da8:9000::81">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="223.113.97.98">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="114.67.103.73">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="119.29.26.206">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="120.25.115.20">
+                </p>
+                <p>教育网</p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="edu.ntp.org.cn">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="2001:da8:9000::130">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="2001:250:380A:5::10">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="202.118.1.130">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="202.118.1.81">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="116.13.10.10">
+                </p>
+                <p>香港地区</p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="hk.ntp.org.cn">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="149.129.123.30">
+                </p>
+                <p>台湾地区</p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="tw.ntp.org.cn">
+                </p>
+                <p>日本</p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="jp.ntp.org.cn">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="133.100.11.8">
+                </p>
+                <p>韩国</p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="kr.ntp.org.cn">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="211.233.40.78">
+                </p>
+                <p>新加坡</p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="sgp.ntp.org.cn">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="218.186.3.36">
+                </p>
+                <p>美国</p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="us.ntp.org.cn">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="158.69.48.97">
+                </p>
+                <p>德国</p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="de.ntp.org.cn">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="131.188.3.223">
+                </p>
+                <p>印度尼西亚</p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="ina.ntp.org.cn">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="203.114.74.17">
+                </p>
+            </div>
+
+            <div id="box_shadow" class="container">
+                <p>
+                    <span style="font-weight: bold;">中国计量科学研究院 NIM 授时服务</span><br>
+                    NIM NTP Server
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="ntp1.nim.ac.cn">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="ntp2.nim.ac.cn">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="111.203.6.13">
+                </p>
+            </div>
+
+            <div id="box_shadow" class="container">
+                <p>
+                    <span style="font-weight: bold;">国际 NTP 快速授时服务</span><br>
+                    Pool NTP ORG
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="15" value="cn.pool.ntp.org">
+                </p>
+                <p>注意，这个全球各地都有服务器，所以尽量使用上面的域名，或者使用 ping 上面域名得到的 IP：</p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="120.25.115.20">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="111.230.189.174">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="119.28.183.184">
+                </p>
+            </div>
+
+            <div id="box_shadow" class="container">
+                <p>
+                    <span style="font-weight: bold;">阿里云公共 NTP 服务器</span><br>
+                    Aliyun NTP Server
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="ntp.aliyun.com">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="ntp1.aliyun.com">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="ntp2.aliyun.com">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="ntp3.aliyun.com">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="ntp4.aliyun.com">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="ntp5.aliyun.com">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="ntp6.aliyun.com">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="ntp7.aliyun.com">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="203.107.6.88">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="182.92.12.11">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="120.25.108.11">
+                </p>
+            </div>
+
+            <div id="box_shadow" class="container">
+                <p>
+                    <span style="font-weight: bold;">腾讯云公共 NTP 服务器</span><br>
+                    Tencent Cloud NTP Server
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="ntp.tencent.com">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="ntp1.tencent.com">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="ntp2.tencent.com">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="ntp3.tencent.com">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="ntp4.tencent.com">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="ntp5.tencent.com">
+                </p>
+            </div>
+
+            <div id="box_shadow" class="container">
+                <p>
+                    教育网（高校自建）<br>
+                    EDU NTP Server
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="ntp.sjtu.edu.cn">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="ntp.neu.edu.cn">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="ntp.bupt.edu.cn">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="ntp.shu.edu.cn">
+                </p>
+            </div>
+
+            <a name="global"></a>
+
+            <div id="box_shadow" class="container">
+            </div>
+
+            <div id="box_shadow" class="container">
+                <p align="center">国际 NTP 服务器<br>
+                    Global Public NTP Server</p>
+                <p id="nav_p">[国际 NTP 服务器] · <a href="#china">国内 NTP 服务器</a></p>
+                <p>
+                    <span style="font-weight: bold;">国际 NTP 快速授时服务</span><br>
+                    Pool NTP ORG
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="pool.ntp.org">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="0.pool.ntp.org">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="1.pool.ntp.org">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="2.pool.ntp.org">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="3.pool.ntp.org">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="asia.pool.ntp.org">
+                </p>
+                <p>注意，这个全球各地都有服务器，所以尽量使用上面的域名，或者使用 ping 上面域名得到的 IP，下面列举一些海外服务器的 IP：</p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="64.62.194.188">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="81.169.199.94">
+                </p>
+            </div>
+
+            <div id="box_shadow" class="container">
+                <p>
+                    <span style="font-weight: bold;">谷歌公共 NTP 服务器</span><br>
+                    Google NTP Server
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="time1.google.com">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="time2.google.com">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="time3.google.com">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="time4.google.com">
+                </p>
+                <p>众所周知的原因，下面 IP 只能在海外使用，或直接 ping 上面域名获得 IP。</p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="216.239.35.0">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="216.239.35.4">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="216.239.35.8">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="216.239.35.12">
+                </p>
+            </div>
+
+            <div id="box_shadow" class="container">
+                <p>
+                    <span style="font-weight: bold;">苹果公司公共 NTP 服务器</span><br>
+                    Apple NTP Server
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="time.apple.com">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="time1.apple.com">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="time2.apple.com">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="time3.apple.com">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="time4.apple.com">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="time5.apple.com">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="time6.apple.com">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="time7.apple.com">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="17.253.84.123">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="17.253.84.125">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="17.253.114.253">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="17.253.116.253">
+                </p>
+            </div>
+
+            <div id="box_shadow" class="container">
+                <p>
+                    <span style="font-weight: bold;">Cloudflare NTP 服务器</span><br>
+                    Cloudflare NTP Server
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="time.cloudflare.com">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="162.159.200.1">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="162.159.200.123">
+                </p>
+            </div>
+            <div id="box_shadow" class="container">
+                <p>
+                    <span style="font-weight: bold;">微软 Windows NTP 服务器</span><br>
+                    Microsoft Windows NTP Server
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="time.windows.com">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="20.189.79.72">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="52.148.114.188">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="40.119.6.228">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="51.137.137.111">
+                </p>
+            </div>
+
+
+            <div id="box_shadow" class="container">
+                <p>
+                    <span style="font-weight: bold;">美国标准技术研究院 NTP 服务器</span><br>
+                    NIST NTP Server
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="time.nist.gov">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="time-nw.nist.gov">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="time-a.nist.gov">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="time-b.nist.gov">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="128.138.141.172">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="132.163.96.1">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="132.163.96.2">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="132.163.97.1">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="132.163.97.2">
+                </p>
+            </div>
+
+            <div id="box_shadow" class="container">
+                <p>
+                    <span style="font-weight: bold;">香港天文台公共 NTP 服务器</span><br>
+                    Hong Kong Observator NTP Server
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="stdtime.gov.hk">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="223.255.185.2">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="223.255.185.3">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="118.143.17.82">
+                </p>
+                <p>
+                    <input class="ips" name="" onclick="oCopy(this)" type="text" size="20" value="118.143.17.83">
+                </p>
+            </div>
+        </div>
+        <a href="https://huangetech.gitee.io/pay/index2.html" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 40px !important;width: 145px !important;margin-bottom: 20px;"></a>
+        <div class="foot">
             ©️ 欢哥科技
-        </section>
+        </div>
     </div>
     </div>
     <script src="time.js"></script>
     <script src="lunar.js"></script>
+    <script src="copy.js"></script>
 </body>
 
 </html>
