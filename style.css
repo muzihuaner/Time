@@ -218,6 +218,162 @@ h3 {
 
     /* 手机端样式 */
     #clock {
-        font-size: 5rem;
+        font-size: 4rem;
     }
+    .huangli {
+        width: 338px !important;;
+    }
+    .xishen {
+        left: 108px!important;
+    }
+    .fushen {
+        left: 180px!important;
+    }
+    .caishen {
+        left: 256px!important;
+    }
+    .clockdate {
+        font-size: xx-large!important;
+    }
+}
+
+.huangli{
+    position: relative;
+    border: 2px solid #000;
+    background: #fff;
+    width: 380px;
+    color: #000;
+    font-size: 14px;
+    zoom: 1;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.huangli:before {
+    top: 0;
+    width: 0;
+    height: 300px;
+    border-right: 1px solid #BBB;
+}
+
+.huangli:before, .huangli:after, .yiji:before {
+    content: '';
+    position: absolute;
+    left: 90px;
+    font-size: 0;
+}
+#md {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 30px;
+    font-size: 20px;
+    color: #000;
+}
+#ymd {
+    position: absolute;
+    left: 60px;
+    top: 0;
+    width: 13px;
+    font-size: 14px;
+}
+
+.markdown-body * {
+    box-sizing: border-box;
+}
+#ymd i {
+    display: block;
+    margin-top: 10px;
+}
+.nayin {
+    top: 30px;
+}
+
+.nayin, .chongsha, .pengzu {
+    position: absolute;
+    left: 130px;
+}
+.chongsha {
+    top: 90px;
+}
+
+.pengzu {
+    top: 160px;
+}
+.xishen {
+    left: 130px;
+}
+
+.xishen, .fushen, .caishen {
+    position: absolute;
+    top: 240px;
+}
+.fushen {
+    left: 215px;
+}
+.caishen {
+    left: 300px;
+}
+.yiji.ji {
+    margin-top: 20px;
+}
+
+.yiji {
+    margin-left: 25px;
+    margin-top: 320px;
+    display: flex;
+}
+.yiji:before {
+    top: 220px;
+    width: 100%;
+    height: 0;
+    border-bottom: 1px solid #BBB;
+}
+.yiji b {
+    margin-right: 4px;
+    padding: 2px 4px;
+    color: #fff;
+    background: green;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.huangli b {
+    font-weight: normal;
+}
+.yiji i {
+    line-height: 1.5em;
+    margin-right: 10px;
+}
+
+.huangli i {
+    font-style: normal;
+    color: #999;
+    margin-right: 5px;
+}
+.yiji.ji b {
+    background: red;
+}
+.shen {
+    margin-left: 22px;
+    margin-top: 20px;
+    display: flex;
+}
+.shen.xiong {
+    margin-bottom: 20px;
+}
+.huangli:after {
+    left: 0;
+    top: 300px;
+    width: 100%;
+    height: 0;
+    border-bottom: 1px solid #BBB;
+}
+.pengzu i {
+    position: absolute;
+    left: 50px;
+    top: -1em;
+    width: 120px;
 }

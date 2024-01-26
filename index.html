@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>快点时间-在线标准北京时间校对</title>
     <script src="//cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://jsd.onmicrosoft.cn/gh/6tail/lunar-javascript@master/lunar.js"></script>
     <meta name="keywords" content="北京时间,时间校对,时间,现在时间,北京时间校对,标准时间">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -24,11 +25,29 @@
             <div style="width:100%;position:relative">
                 <div id="clock0_bg"><time id="clock">加载中...</time></div>
             </div>
+            <div class="localtime">设备时间:<time id="localclock">加载中...</time></div>
             <div id="dd" class=" tr clockdate" title="点击显示日历">加载中...</div>
+
+            <div class="huangli">
+                <div id="md"></div>
+                <div id="ymd"><i></i><i></i><i></i><i></i></div>
+                <div class="nayin"><b>五行</b> <i id="nayin"></i></div>
+                <div class="chongsha"><b>冲煞</b> <i id="chongsha"></i></div>
+                <div class="pengzu"><b>彭祖</b> <i id="pengzu"></i></div>
+                <div class="xishen"><b>喜神</b><i id="xishen"></i></div>
+                <div class="fushen"><b>福神</b><i id="fushen"></i></div>
+                <div class="caishen"><b>财神</b><i id="caishen"></i></div>
+                <div class="yiji" id="yi">     
+                </div>
+                <div class="yiji ji" id="ji">   
+                </div>
+                <div class="shen" id="jshen">
+                </div>
+                <div class="shen xiong" id="xshen"> 
+                </div>
+            </div>
         </div>
         <div class=" tr" id="global-times"></div>
-
-
 
         <section id="time_zone">
             <h2><span>北京</span>时区信息</h2>
@@ -53,7 +72,8 @@
         </section>
     </div>
     </div>
-   <script src="time.js"></script>
+    <script src="time.js"></script>
+    <script src="lunar.js"></script>
 </body>
 
 </html>
