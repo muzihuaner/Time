@@ -374,3 +374,22 @@ input.ips {
     text-align: center;
     width: 100%;
 }
+.wikitable {
+    background-color: #f8f9fa;
+    color: #202122;
+    margin: 0 auto;
+    border: 1px solid #a2a9b1;
+    border-collapse: collapse;
+}
+
+table {
+    font-size: 100%;
+}
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: gray;
+}
