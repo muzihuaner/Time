@@ -297,7 +297,7 @@ h3 {
 .yiji {
     margin-left: 25px;
     margin-top: 320px;
-    display: flex;
+    display: inline-block;
 }
 .yiji:before {
     top: 220px;
@@ -318,7 +318,7 @@ h3 {
 }
 
 .huangli b {
-    font-weight: normal;
+    font-weight: bolder;
 }
 .yiji i {
     line-height: 1.5em;
