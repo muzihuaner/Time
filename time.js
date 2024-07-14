@@ -1,53 +1,48 @@
 const cities = { "东京": 1, "莫斯科": -5, "巴黎": -7, "伦敦": -8, "纽约": -13, "洛杉矶": -16 };
 
-function getSysTime() {
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'https://quan.suning.com/getSysTime.do', true);
-  xhr.onload = function () {
-    if (xhr.status === 200) {
-      var response = JSON.parse(xhr.responseText);
-      var sysTime = response.sysTime2;
-      var timeParts = sysTime.split(" ")[1].split(":");
-      var hours = timeParts[0];
-      var minutes = timeParts[1];
-      var seconds = timeParts[2];
-      var formattedTime = hours + ":" + minutes + ":" + seconds;
-      document.getElementById('clock').textContent = formattedTime; // Update clock with formatted time
-      var currentTime = response.sysTime2; // 例如 1627489200000
-      // 将 currentTime 转换为 Date 对象
-      var currentTimeDate = new Date(currentTime.replace(/-/g, '/'));
-
-      // 获取设备的当前时间
-      var deviceTime = new Date();
-
-      // 计算时间差，单位为毫秒
-      var timeDifference = deviceTime - currentTimeDate;
-
-      // 将时间差显示在 #time-difference 元素中
-      document.getElementById('time-difference').textContent = '您的系统时间慢了: ' + timeDifference + ' 毫秒';
-
-
-
-
-    } else {
-      console.error('Request failed. Status:', xhr.status);
-      // Handle error if necessary
-    }
-  };
-  xhr.onerror = function () {
-    console.error('Request failed. Network error');
-    // Handle error if necessary
-  };
-  xhr.send();
+async function getBeijingTime() {
+  try {
+      let response = await fetch('http://worldtimeapi.org/api/timezone/Asia/Shanghai');
+      if (response.ok) {
+          let data = await response.json();
+          let datetimeString = data.datetime;
+          
+          // 解析时间字符串为 Date 对象
+          let beijingTime = new Date(datetimeString);
+          return beijingTime;
+      } else {
+          throw new Error('Network response was not ok');
+      }
+  } catch (error) {
+      console.error('Fetch error:', error);
+  }
 }
 
+async function startClock() {
+  try {
+      let beijingTime = await getBeijingTime();
+      
+      // 设置初始时分秒
+      updateClock(beijingTime);
+      
+      // 每秒更新一次时分秒
+      setInterval(() => {
+          beijingTime.setSeconds(beijingTime.getSeconds() + 1);
+          updateClock(beijingTime);
+      }, 1000);
+      
+  } catch (error) {
+      console.error('Error starting clock:', error);
+  }
+}
 
-function startClock() {
-  getSysTime();
-  setInterval(getSysTime, 1000);
+function updateClock(beijingTime) {
+  // 在页面上显示时分秒
+  document.getElementById('clock').textContent = beijingTime.toLocaleTimeString([], {hour12: false});
 }
 
 startClock();
+
 
 
 
