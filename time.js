@@ -2,7 +2,7 @@ const cities = { "东京": 1, "莫斯科": -5, "巴黎": -7, "伦敦": -8, "纽�
 
 async function getBeijingTime() {
   try {
-      let response = await fetch('http://worldtimeapi.org/api/timezone/Asia/Shanghai');
+      let response = await fetch('https://worldtimeapi.org/api/timezone/Asia/Shanghai');
       if (response.ok) {
           let data = await response.json();
           let datetimeString = data.datetime;
