@@ -2,19 +2,19 @@ const cities = { "东京": 1, "莫斯科": -5, "巴黎": -7, "伦敦": -8, "纽�
 
 async function getBeijingTime() {
   try {
-      let response = await fetch('https://worldtimeapi.org/api/timezone/Asia/Shanghai');
+      let response = await fetch('https://f.m.suning.com/api/ct.do');
       if (response.ok) {
           let data = await response.json();
-          let datetimeString = data.datetime;
-          
-          // 解析时间字符串为 Date 对象
-          let beijingTime = new Date(datetimeString);
+          // 苏宁API返回的时间戳是毫秒格式，直接创建Date对象
+          let beijingTime = new Date(data.currentTime);
           return beijingTime;
       } else {
           throw new Error('Network response was not ok');
       }
   } catch (error) {
       console.error('Fetch error:', error);
+      // 如果API请求失败，返回本地时间作为后备方案
+      return new Date();
   }
 }
 
